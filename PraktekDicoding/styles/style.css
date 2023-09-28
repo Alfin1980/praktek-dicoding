@@ -5,3 +5,369 @@
     padding: 8px 12px;
     background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
   }
+
+/* 
+#####################################################################################################
+<p><h1>Pendalaman HTML >Menuliskan Aturan Styling</h1></p>
+#################################################################################################### */
+
+h1 { color: green; }
+ 
+p {
+   font-size: small;
+   font-family: sans-serif;
+}
+
+p {
+  font-size: small;
+  font-family: sans-serif;
+  /* deklarasikan nilai properti lainnya pada baris baru */
+}
+
+h1 {
+  margin: 2 em; /* Deklarasi tidak akan berfungsi karena terdapat spasi antara nilai dan satuan */
+}
+
+p {
+  font-size: small;
+  font-family: sans-serif;
+  /* memilih sans-serif sesuai hasil diskusi klien pada 2 Jan 2021*/
+}
+
+/* style footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+}
+
+/* Pseudo Selector */
+a:hover {
+  color: blue;
+}
+
+a:link {
+  color: red;
+}
+
+/* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+a:visited {
+  color: green;
+}
+
+/* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+a:hover {
+  color: pink;
+}
+
+/* rule akan diterapkan pada sebuah tautan ketika ditekan */
+a:active {
+  color:orange;
+}
+/* Pseudo-elemen Selector */
+blockquote::before,
+blockquote::after {
+  content: '"';
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Formatting Text */
+/* font family */
+body {
+  font-family: sans-serif;
+}
+/* font size */
+h1 {
+  font-size: 1.5em;
+}
+/* Font-weight */
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+/* Font-style */
+.normal {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.oblique {
+  font-style: oblique;
+}
+/* Font-variant */
+h1 {
+  font-variant: small-caps;
+}
+
+/* Text Styling: Line Height, Text Indent, dan Text Alignment */
+
+/* Line Height */
+.ln2 {
+  line-height: 2;
+}
+
+.ln200 {
+  line-height: 200%;
+}
+
+.ln2em {
+  line-height: 2em;
+}
+
+/* Text Alignment */
+main {
+  width: 80%;
+  margin: 0 auto;
+
+  border: 1px solid black;
+}
+
+p {
+  border: 1px solid black;
+}
+
+.tl-left {
+  text-align: left;
+}
+
+.tl-right {
+  text-align: right;
+}
+
+.tl-center {
+  text-align: center;
+}
+
+.tl-justify {
+  text-align: justify;
+}
+/* Text Styling: Text Decoration, Text Transform, Word-Letter Spacing, dan Text Shadow */
+
+/* Text Decoration */
+.decoration-none {
+  text-decoration: none;
+}
+
+/* Text Transform */
+main {
+  font-family: sans-serif;
+}
+
+.transform-none {
+  text-transform: none;
+}
+
+.transform-capitalize {
+  text-transform: capitalize;
+}
+
+.transform-lowercase {
+  text-transform: lowercase;
+}
+
+.transform-uppercase {
+  text-transform: uppercase;
+}
+/* Word and Letter Spacing */
+main {
+  font-family: sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 4px;
+}
+
+.word-spacing {
+  word-spacing: 1.5em;
+}
+/* Text Shadow */
+.one {
+  text-shadow: 2px 2px 0px #000000;
+  background-color: #eeeeee;
+  color: #666666;
+}
+
+.two {
+  text-shadow: 4px 4px 3px #666666;
+  background-color: #dddddd;
+  color: #666666;
+}
+
+.three {
+  text-shadow: 4px 4px 7px #111111;
+  background-color: #cccccc;
+  color: #ffffff;
+}
+
+.four {
+  text-shadow: -2px -2px #666666;
+  background-color: #cccccc;
+  color: #bbbbbb;
+}
+
+/* Numeric Value */
+
+/* Warna hijau menggunakan format RGB */
+color: rgb(78,231,23);
+ 
+/* Warna hijau Menggunakan format HEX */
+color: #4ee717;
+ 
+/* Warna hijau menggunakan format HSL (hanya di CSS3)*/
+color: hsl(104, 82%, 50%);
+
+/* opacity */
+p {
+  background-color: red;
+}
+
+p.opacity-50 {
+  opacity: 50%;
+}
+/* default 100 */
+p.opacity-100 {
+  opacity: 100%;
+}
+/* Opacity pada Warna */
+div {
+  width: 50%;
+  height: 200px;
+
+  line-height: 200px;
+  text-align: center;
+}
+
+.box-1 {
+  background-color: rgb(255, 255, 0, 0.75);
+
+  float: left;
+}
+
+.box-2 {
+  background-color: hsl(120, 100%, 25%, 0.75);
+
+  float: left;
+  margin-left: -25%;
+
+  /* Box Model */
+  /* Box Dimensions */.content {
+  max-width: 800px;
+  height: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: deeppink;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* Limiting Dimension */
+  .box {
+    height: 300px;
+    width: 300px;
+    background-color: #11c5c6;
+  }
+  
+  p {
+    height: 75%;
+    width: 75%;
+    background-color: #fbdd1c;
+  }
+  /*  Overflowing Conten */
+  div {
+    height: 200px;
+    width: 200px;
+    background-color: lightgreen;
+  }
+  /* Box-Sizing*/
+  div {
+    height: 200px;
+    width: 200px;
+    background-color: lightgreen;
+    border: 10px solid cornflowerblue;
+    padding: 20px;
+  }
+  
+  .content {
+    box-sizing: content-box;
+  }
+  
+  .box {
+    box-sizing: border-box;
+  }
+  /* Border width */
+  .box {
+    border-top-width: 2px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 2px;
+  }
+  /*bprder style  */
+  .box {
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: groove;
+    border-left-style: double;
+  
+    border-width: 4px;
+    border-color: red;
+    width: 200px;
+    height: 50px;
+  }
+  /* Border Color */
+/* menggunakan rgb format */
+border-color: rgb(80, 138, 212);
+ 
+/* menggunakan format hex */
+border-color: #4ee717;
+ 
+/* menggunakan nama warna */
+border-color: red;
+/* padding */
+p {
+  border: 4px solid #00a2c6;
+  width: 350px;
+}
+
+p.example {
+  padding: 10px;
+}
+/* padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px; */
+
+/* MARGIN */
+/* margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px; */
+
+/* top dan bottom bernilai 10px, left dan right bernilai 15px */
+/* margin: 10px 15px; */
+
+/* Centering Content */
+.box {
+  width: 50%;
+  border: 4px solid darkblue;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box.center {
+  margin: 0 auto;
+}
