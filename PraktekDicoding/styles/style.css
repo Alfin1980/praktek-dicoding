@@ -371,3 +371,306 @@ margin-left: 25px; */
 .box.center {
   margin: 0 auto;
 }
+/* BOX SHADOW */
+.box {
+  width: 200px;
+  height: 200px;
+
+  background-color: greenyellow;
+
+  box-shadow: 6px 6px 5px 10px #666666;
+}
+/* Rounded Corner */
+.rounded {
+  width: 300px;
+  padding: 20px;
+  border: 4px solid deeppink;
+
+  border-radius: 10px;
+}
+/*  jumbotron */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+ 
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: white;
+}
+ 
+nav a:hover {
+  font-weight: bold;
+}
+ 
+.profile header {
+  text-align: center;
+}
+/*  Perbedaan Static Flow dan Non-Static Flow */
+.second {
+  background-color: #6495ed;
+ 
+  position: relative;
+  top: 30px;
+  left: 10px;
+}
+/* Relative Positioning */
+h1 {
+  background-color: #aaaaaa;
+  padding: 30px;
+}
+
+p {
+  width: 450px;
+}
+
+.relative {
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+/* Absolute Positioning */
+h1 {
+  width: 250px;
+}
+
+p {
+  width: 450px;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+/* Fixed Positioning */
+h3 {
+  padding: 10px;
+  background-color: #aaaaaa;
+  margin: 0;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* Floating */
+* {
+  /* digunakan untuk menghapus seluruh padding dan margin standar yang diberikan browser pada elemen */
+  margin: 0;
+  padding: 0;
+
+  /* Menggunakan border-box dalam perhitungan dimensi box-nya */
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.left-content {
+  text-align: center;
+  line-height: 400px;
+  width: 30%;
+  height: 100%;
+  background-color: #00c7ed;
+
+  /* digunakan untuk memindahkan posisi elemen ke sisi kiri container */
+  float: left;
+}
+
+.right-content {
+  text-align: center;
+  line-height: 400px;
+  width: 70%;
+  height: 100%;
+  background-color: #60d0a8;
+
+  /* digunakan untuk memindahkan posisi elemen ke sisi kanan container */
+  float: right;
+}
+/* Specific Style dengan Media Query */
+main {
+  display: flex;
+
+  flex-direction: column;
+}
+
+main aside {
+  order: -1;
+}
+
+/* CSS rule dalam block @media di bawah akan diterapkan jika ukuran viewport di atas 600px */
+@media screen and (min-width: 600px) {
+  h1 {
+    color: red;
+  }
+
+  h2 {
+    color: green;
+  }
+}
+
+/* CSS rule dalam block @media di bawah akan diterapkan jika ukuran viewport di atas 992px */
+@media screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+  }
+
+  #mainContent {
+    flex-basis: 70%;
+  }
+
+  main aside {
+    flex-basis: 30%;
+
+    order: 1;
+  }
+
+  h1 {
+    color: initial;
+  }
+
+  h2 {
+    color: initial;
+  }
+
+  h3 {
+    color: green;
+  }
+/* 
+#####################################################################################################
+<p><h1>Pendalaman HTML > Pengenalan Flexbox</h1></p>
+#################################################################################################### */
+  /* DISPLAY */
+  .container {
+    display: flex;
+  }
+  /* Flex direction */
+  .container {
+    display: flex;
+    flex-direction: row | row-reverse | column | column-reverse;
+  }
+  /* Flek Wrap */
+  .container {
+    display: flex;
+    flex-wrap: nowrap | wrap | wrap-reverse;
+  }
+  /* just content */
+  .container {
+    display: flex;
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  }
+  /* Align items */
+  .container {
+    display: flex;
+    align-items: stretch | flex-start | flex-end | center | baseline;
+  }
+  /* align content */
+  .container {
+    display: flex;
+    align-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  }
+/* Gap (celah)*/
+  .container {
+    display: flex;
+    gap: 1rem; /*diterapkan secara vertikal dan horizontal dengan nilai yang sama*/
+    gap: 1rem 2rem; /*diterapkan secara vertikal dan horizontal*/
+    row-gap: 1rem; /*diterapkan secara horizontal*/
+    column-gap: 1rem; /*diterapkan secara vertikal*/
+  }
+/*   
+  #####################################################################################################
+  <p><h1>Pendalaman HTML > Properti-Properti pada Flex Items</h1></p>
+  #################################################################################################### */
+
+  /* order */
+  .item {
+    order: 5; /*default is 0*/
+  }
+  /* Flex grow */
+  .item {
+    flex-grow: 1; /*default is 0*/
+  }
+  /* Flex shrink */
+  .item {
+    flex-shrink: 0; /*default is 1*/
+  }
+  /* Flex basis  */
+  .item {
+    flex-basis: 1rem | 25% | auto; /*default is auto*/
+  }
+/* Align self */
+  .items {
+    align-self: auto | flex-start | flex-end | center | baseline | stretch; /*default is auto*/
+  }
+  /* Implementasi Flexbox pada Halaman Profil Bandung */
+  nav {
+    background-color: #00A2C6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+  }
+   
+  nav ul {
+    padding-inline: 4rem;
+    display: flex;
+  }
+   
+  nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+
+    /*  Landing Page Dicoding Indonesia */
+    header.navbar-container .nav-list ul {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem 1rem;
+    }
+     
+    header.navbar-container .nav-list li {
+      list-style-type: none;
+    }
+     
+    header.navbar-container .nav-list li a {
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: black;
+      padding: .5rem 1.5rem;
+      border-radius: 999px;
+      transition: all .2s ease-in-out;
+    }
+     
+    header.navbar-container .nav-list li:hover a {
+      background-color: #425c77;
+      color: white;
+    }
+    /*  Membangun Layout Responsif pada Landing Page */
+    main aside .social-media li a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: white;
+      transition: all .1s ease-in-out;
+    }
+     
+    main aside .social-media li a:hover {
+      color: #89b0d9;
+    }
+    /*End of Main Content*/
+     
+    /* Medium devices (landscape tablets, 768px and down) */
+    @media screen and (max-width: 768px) {}
